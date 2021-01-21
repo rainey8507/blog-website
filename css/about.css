@@ -1,0 +1,57 @@
+/* About starts  */
+#about {
+    padding: 20px 0 50px 0;
+    background: var(--main-color);
+}
+.heading {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 22px;
+}
+
+.heading-about {
+    padding-bottom: 18px;
+}
+
+.heading h2 {
+    color: var(--other-color);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 0;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+figure .img-about {
+    width: fit-content;
+    padding: 0 35px;
+    height: auto;
+    border-radius: 50%;
+}
+
+figure figcaption {
+    color: var(--white);
+    margin-top: 10px;
+}
+
+.about-text {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.about-text p {
+    color: var(--white);
+}
+/* About ends  */
