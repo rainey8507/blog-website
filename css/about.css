@@ -1,8 +1,14 @@
+@import url(./styles.css);
 /* About starts  */
 #about {
     padding: 20px 0 50px 0;
-    background: var(--main-color);
+    background: rgba(76, 10, 6, 0.226);
 }
+
+#about p {
+    color: var(--text-color);
+}
+
 .heading {
     text-transform: capitalize;
     text-align: center;
@@ -14,13 +20,20 @@
 }
 
 .heading h2 {
-    color: var(--other-color);
+    color: var(--main-color);
 }
 
+
 .about-content {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-gap: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.about-text {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
 }
 
 figure {
@@ -30,20 +43,20 @@ figure {
 }
 figure .img-about {
     width: fit-content;
-    padding: 0 35px;
     height: auto;
     border-radius: 50%;
+    padding: 0 40px;
 }
 
 figure figcaption {
-    color: var(--white);
+    color: var(--text-color);
     margin-top: 10px;
 }
 
 .about-text {
     display: flex;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 30px;
     font-size: 16px;
     font-weight: normal;
@@ -55,3 +68,32 @@ figure figcaption {
     color: var(--white);
 }
 /* About ends  */
+
+@media (max-width: 990px) {
+    /* About */
+    #about {
+        padding-bottom: 20px;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    figcaption {
+        padding-bottom: 10px;
+    }
+    figure .img-about {
+        width: fit-content;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 850px) {
+
+}

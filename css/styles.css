@@ -53,12 +53,6 @@ nav {
     width: 100%;
 }
 
-label.logo {
-    color: var(--white);
-    font-size: 35px;
-    font-family: 'Yusei Magic',cursive;
-    padding: 0 100px;
-}
 
 nav ul {
     float: right;
@@ -82,6 +76,7 @@ nav ul li a {
 nav ul li a:hover{
     color: var(--other-color);
     font-weight: bolder;
+    border-bottom: 1.5px solid var(--main-color);
 }
 
 .btn-check {
@@ -253,23 +248,53 @@ nav ul li a:hover{
 }
 /* Recipe ends  */
 
-/* Terms starts  */
-.heading-terms {
-    padding: 25px 0 5px 0;
+/* Basic starts */
+#basic {
+    background: rgba(76, 10, 6, 0.226);
+    padding: 30px;
 }
 
-.heading-terms h2 {
+#basic h2 {
     color: var(--main-color);
-}
-.content-terms {
-    padding: 0 50px 30px 50px;
+    padding-bottom: 10px;
 }
 
-.pb {
-    padding-bottom: 20px;
-    font-size: 20px;
+.basic-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 15px;
 }
-/* Terms ends */
+
+.basic-text1 {
+    padding: 20px;
+}
+
+.text-basic {
+    line-height: 2;
+}
+
+.heading-basic1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.basic-button {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-basic {
+    background: var(--main-color);
+    padding: 14px 16px;
+    border-radius: 15px;
+    color: var(--other-color);
+}
+
+.btn-basic:hover {
+    font-weight: bold;
+}
+
+/* Basic ends  */
 
 /* Footer starts */
 footer {
@@ -287,11 +312,16 @@ footer p {
 @media (max-width: 990px) {
     label.logo {
         font-size: 30px;
-        padding-left: 50px;
+        padding: 20px 0 0p 30px;
     }
 
     nav li a {
         font-size: 16px;
+    }
+
+    nav li a:hover {
+        border: none;
+        font-weight: normal;
     }
 
     /* Banner */
@@ -316,24 +346,13 @@ footer p {
         margin-top: 12px;
     }
 
-    /* About */
-    .about-content {
-        display: grid;
-        grid-template-columns: 2fr;
-        gap: 0px;
-    }
-    figure .img-about {
-        max-width: 100%;
-    }
-
-    .about-text {
-        width: 100%;
-    }
-    
 
     /* Blog  */
     #blog {
         padding: 40px 40px 18px 55px;
+    }
+    #blog img {
+        width: fit-content;
     }
 
     .blog-content {
@@ -347,26 +366,6 @@ footer p {
         font-size: 16px;
     }
 
-    /* About */
-    .heading h2 {
-        font-size: 25px;
-    }
-    #about {
-        padding: 20px 20px 40px 20px;
-    }
-
-    .heading-about {
-        padding-bottom: 11px;
-    }
-
-    .img-about {
-        width: 29%;
-        padding: 10px 0 0 35px;
-    }
-
-    .about-text {
-        font-size: 16px;
-    }
 
     /* Recipe */
     .heading-recipe {
@@ -378,16 +377,20 @@ footer p {
         padding-top: 6px;
     }
 
-    /* Term */
-    .heading-terms {
-        padding: 12px 0 9px 0;
+    /* Basic */
+    .basic-container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
-    .pb {
-        padding-bottom: 12px;
-        font-size: 16px;
+    #basic h2 {
+        padding-bottom: 0;
     }
-    
+
+    .basic-text1 {
+        padding: 10px 20px 0 20px;
+    }
+
     /* Footer  */
     footer p {
         font-size: 14px;
@@ -439,23 +442,7 @@ footer p {
         left: 0;
     }
 
-    /* About  */
-    .heading-about {
-        padding-bottom: 10px;
-    }
-
-    .about-content {
-        display: grid;
-        grid-template-columns: 4fr;
-    }
-
-    .img-about {
-        width: 60%;
-    }
-
-    .about-text p {
-        text-align: center;
-    }
+    
     /* Banner */
     #banner {
         height: calc(100vh - 200px);
@@ -577,18 +564,23 @@ footer p {
         padding: 8px 0;
     }
 
-    /* Term */
-    .content-terms {
-        padding: 0 20px 8px 30px;
-    }
 
     @media (max-width: 480px) {
+        .logo {
+            padding-left: 80px;
+            font-size: 25px;
+        }
         #banner {
             height: calc(100vh - 350px);
         }
 
         .banner-content {
             padding-top: 30px;
+        }
+
+        footer p {
+            padding: 10px 20px;
+            font-size: 12px;
         }
     }
 }
