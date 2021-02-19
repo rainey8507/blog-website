@@ -36,6 +36,7 @@ h1 {
 
 h2 {
     font-size: 32px;
+    font-family: 'Dosis', sans-serif;
 }
 
 h3 {
@@ -51,9 +52,19 @@ nav {
     background: var(--main-color);
     height: 60px;
     width: 100%;
+    padding-top: 8px;
 }
 
-
+.logo {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: var(--other-color);
+    margin-left:30px;
+  
+    cursor: pointer;
+    text-decoration: none;
+}
 nav ul {
     float: right;
     margin-right: 60px;
@@ -61,7 +72,7 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    line-height: 60px;
+    line-height: 40px;
     margin:0 5px;
 }
 
@@ -119,6 +130,7 @@ nav ul li a:hover{
 
 .banner-content h2 {
     font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .banner-content h1 {
